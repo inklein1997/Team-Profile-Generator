@@ -10,7 +10,6 @@
     "jest": "^27.4.7",
     "path": "^0.12.7"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "jest --verbose test/*"
   },
