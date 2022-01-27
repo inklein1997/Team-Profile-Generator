@@ -1,3 +1,4 @@
+const generateCard = require('./generateCard')
 
 const htmlTemplate = () => {
     return `<!DOCTYPE html>
@@ -14,6 +15,9 @@ const htmlTemplate = () => {
 </head>
 <body>
     <h1 class='text-center p-5 bg-danger text-white'>My Team</h1>
-    <div class='d-flex container justify-content-center gap-5 flex-wrap mt-5'></div>
+    <div class='d-flex container justify-content-center gap-5 flex-wrap mt-5'>${generateCard}</div>
 </body>
 </html>`}
+
+
+module.exports = htmlTemplate

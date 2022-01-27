@@ -5,8 +5,8 @@ const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 
 // Import needed files
-const generateHTML = ('./src/generateHTML')
-const generateCard = ('./src/generateCard')
+const generateHTML = require('./src/generateHTML')
+const generateCard = require('./src/generateCard')
 
 // Import needed packages
 const fs = require('fs');
@@ -82,7 +82,7 @@ function pushMember(answers) {
             break
     }
     inquirer.prompt(questionMenu).then((answer) => {
-        menu(answer) !== 'No' ? addMembers(menu(answer)) : showAnswers()
+        menu(answer) !== 'No' ? addMembers(menu(answer)) : createHTML();console.log(teamMembers)
     })
 }
 
@@ -97,11 +97,15 @@ const menu = (answer) => {
     }
 }
 
-function showAnswers() {
-    console.log(teamMembers)
-    console.log(`File Generated.`)
-}
 
-// For every element in the teamMembers array, we want to create a card.
+function createHTML() {    
+    teamMembers.forEach(member => fs.appendFile('./dist/cards.html', generateCard(member), (err) => {err ? console.log(err) : console.log('cards generated')}))
+
+    fs.writeFile('./dist/index.html', generateHTML(), (err) => {
+        err ? console.log(err) : console.log(`HTML Generated!\n${teamMembers}`)
+    })
+    
+
+}
 
 addMembers()
