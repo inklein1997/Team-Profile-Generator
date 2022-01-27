@@ -4,7 +4,7 @@ describe('Intern', () => {
     describe('initialization', () => {
         it('should set school name via constructor', () => {
             const school = 'University of Texas'
-            const obj = new Intern(school)
+            const obj = new Intern(undefined, undefined, undefined, school)
             expect(obj.getSchool()).toBe(school)
         })
         it('should return role as Intern', () => {

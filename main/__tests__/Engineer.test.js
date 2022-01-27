@@ -4,7 +4,7 @@ describe('Engineer', () => {
     describe('initialization', () => {
         it('should set github username via constructor', () => {
             const github = 'inklein1997'
-            const obj = new Engineer(github)
+            const obj = new Engineer(undefined, undefined, undefined, github)
             expect(obj.getGithub()).toBe(github)
         })
         it('should return role as Engineer', () => {

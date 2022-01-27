@@ -12,16 +12,13 @@ class Employee {
         return this.name
     }
     getId() {
-        if(typeof this.id !== 'number') {
-            return 'ID is not a number'
-        }
-        return this.id
+        return parseInt(this.id)
     }
     getEmail() {
-        if(!this.email.endsWith('.com' || '.org' || '.edu' || '.gov')) {
-            return 'Email is not valid'
+        if(this.email.endsWith('.com' || '.org' || '.edu' || '.gov')) {
+            return this.email
         }
-        return this.email
+        return 'Email is not Valid'
     }
     getRole() {
         return 'Employee'

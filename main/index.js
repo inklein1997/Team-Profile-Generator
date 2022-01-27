@@ -11,6 +11,7 @@ const generateHTML = require('./src/generateHTML')
 // Import needed packages
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { strictEqual } = require('assert');
 
 const teamMembers = []
 const roles = []
@@ -107,3 +108,6 @@ function createHTML() {
 }
 
 addMembers()
+
+let str = 'michaelklein1997@gmail.com'
+console.log(str.endsWith('.com' || '.org' || '.edu' || '.gov'))
