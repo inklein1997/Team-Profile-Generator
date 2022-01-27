@@ -29,7 +29,7 @@
 - ### [URL to Github Repository](https://github.com/inklein1997/README-Generator)
 
 ## Screenshot of Webpage
-![alt](./assets/images/...)
+![alt](./assets/images/generatedHTML-screenshot.png)
 
 ## Installation Instructions
 Since README.md Generator is a NodeJS application, you must have NodeJS downloaded. Please download [here](https://nodejs.org/en/download/) if you have not done so.
