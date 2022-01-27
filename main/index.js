@@ -1,12 +1,12 @@
 // Import Class constructors
-const Employee = require('./lib/Employee');
+// const Employee = require('./lib/Employee');
 const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 
 // Import needed files
 const generateHTML = require('./src/generateHTML')
-const generateCard = require('./src/generateCard')
+// const generateCard = require('./src/generateCard')
 
 // Import needed packages
 const fs = require('fs');
@@ -82,7 +82,7 @@ function pushMember(answers) {
             break
     }
     inquirer.prompt(questionMenu).then((answer) => {
-        menu(answer) !== 'No' ? addMembers(menu(answer)) : createHTML();console.log(teamMembers)
+        menu(answer) !== 'No' ? addMembers(menu(answer)) : createHTML();
     })
 }
 
@@ -99,13 +99,11 @@ const menu = (answer) => {
 
 
 function createHTML() {    
-    teamMembers.forEach(member => fs.appendFile('./dist/cards.html', generateCard(member), (err) => {err ? console.log(err) : console.log('cards generated')}))
-
-    fs.writeFile('./dist/index.html', generateHTML(), (err) => {
-        err ? console.log(err) : console.log(`HTML Generated!\n${teamMembers}`)
+// console.log(teamMembers[0].__proto__.constructor.name)
+// teamMembers.forEach(member => console.log(member))
+    fs.writeFile('./dist/index.html', generateHTML(teamMembers), (err) => {
+        err ? console.log(err) : console.log( 'teamMembers')
     })
-    
-
 }
 
 addMembers()
