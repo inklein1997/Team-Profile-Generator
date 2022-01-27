@@ -14,7 +14,7 @@ const cardTemplate = (member) => {
       <div class="card">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${id}</li>
-          <li class="list-group-item">Email: ${email}</li>
+          <li class="list-group-item">Email: <a href=${email}>${email}</a></li>
           <li class="list-group-item">Office Number: ${officeNumber}</li>
         </ul>
       </div>
@@ -31,7 +31,7 @@ const cardTemplate = (member) => {
       <div class="card">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${id}</li>
-          <li class="list-group-item">Email: ${email}</li>
+          <li class="list-group-item">Email: <a href=${email}>${email}</a></li>
           <li class="list-group-item">School: ${school}</li>
         </ul>
       </div>
@@ -48,8 +48,8 @@ const cardTemplate = (member) => {
       <div class="card">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${id}</li>
-          <li class="list-group-item">Email: ${email}</li>
-          <li class="list-group-item">GitHub: ${github}</li>
+          <li class="list-group-item">Email: <a href=${email}>${email}</a></li>
+          <li class="list-group-item">GitHub: <a href=github.com/${github} target=_blank>${github}</a></li>
         </ul>
       </div>
     </div>
