@@ -6,12 +6,10 @@ const Manager = require('./lib/Manager');
 
 // Import needed files
 const generateHTML = require('./src/generateHTML')
-// const generateCard = require('./src/generateCard')
 
 // Import needed packages
 const fs = require('fs');
 const inquirer = require('inquirer');
-// const { strictEqual } = require('assert');  //uhhh what the heck is this...
 
 const teamMembers = []
 const roles = []
@@ -66,6 +64,8 @@ function addMembers(role) {
         role = "Manager"
     }
     roles.push(role)
+    console.log('--------------')
+    console.log(roles[0])
     inquirer.prompt(questions).then(pushMember)
 }
 
@@ -100,8 +100,6 @@ const menu = (answer) => {
 
 
 function createHTML() {    
-// console.log(teamMembers[0].__proto__.constructor.name)
-// teamMembers.forEach(member => console.log(member))
     fs.writeFile('./dist/index.html', generateHTML(teamMembers), (err) => {
         err ? console.log(err) : console.log( 'teamMembers')
     })
