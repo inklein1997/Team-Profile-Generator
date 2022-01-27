@@ -97,7 +97,7 @@ const menu = (answer) => {
 
 function createHTML() {    
     fs.writeFile('./dist/index.html', generateHTML(teamMembers), (err) => {
-        err ? console.log(err) : console.log( 'teamMembers')
+        err ? console.log(err) : console.log('HTML Generated!')
     })
 }
 
