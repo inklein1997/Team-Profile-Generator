@@ -1,7 +1,7 @@
 const generateCard = require('./generateCard')
 
 const htmlTemplate = (teamMembers) => {
-    // console.log(teamMembers)
+    console.log(teamMembers)
     // teamMembers.forEach(member => console.log(member))
     return `<!DOCTYPE html>
 <html lang="en">
@@ -17,7 +17,7 @@ const htmlTemplate = (teamMembers) => {
 </head>
 <body>
     <h1 class='text-center p-5 bg-danger text-white'>My Team</h1>
-    <div class='d-flex container justify-content-center gap-5 flex-wrap mt-5'>${teamMembers.forEach(member => generateCard(member))}</div>
+    <div class='d-flex container justify-content-center gap-5 flex-wrap mt-5'>${teamMembers.map(member => generateCard(member)).join('')}</div>
 </body>
 </html>`
 }
