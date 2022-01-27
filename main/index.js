@@ -12,11 +12,10 @@ const generateCard = ('./src/generateCard')
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-let role
 const teamMembers = []
 const roles = []
 
-const questionsAll = [
+const questions = [
     {
         type: 'input',
         message: `Please enter the ${roles[0]}'s name.`,
@@ -66,12 +65,22 @@ function addMembers(role) {
         role = "Manager"
     }
     roles.push(role)
-    inquirer.prompt(questionsAll).then(pushMember)
+    inquirer.prompt(questions).then(pushMember)
 }
 
 function pushMember(answers) {
     answers.role = roles.pop()
-    teamMembers.push(answers)
+    switch(answers.role) {
+        case 'Intern':
+            teamMembers.push(new Intern(answers.name, answers.id, answers.email, answers.school))
+            break
+        case 'Engineer':
+            teamMembers.push(new Engineer(answers.name, answers.id, answers.email, answers.github))
+            break
+        case 'Manager':
+            teamMembers.push(new Manager (answers.name, answers.id, answers.email, answers.roomNumber))
+            break
+    }
     inquirer.prompt(questionMenu).then((answer) => {
         menu(answer) !== 'No' ? addMembers(menu(answer)) : showAnswers()
     })
@@ -92,5 +101,7 @@ function showAnswers() {
     console.log(teamMembers)
     console.log(`File Generated.`)
 }
+
+// For every element in the teamMembers array, we want to create a card.
 
 addMembers()
