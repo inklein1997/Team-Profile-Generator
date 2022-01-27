@@ -14,42 +14,6 @@ const inquirer = require('inquirer');
 const teamMembers = []
 const roles = []
 
-const questions = [
-    {
-        type: 'input',
-        message: `Please enter the ${roles[0]}'s name.`,
-        name: 'name',
-    },
-    {
-        type: 'input',
-        message: `Please enter the ${roles[0]}'s employee ID.`,
-        name: 'id',
-    },
-    {
-        type: 'input',
-        message: `Please enter the ${roles[0]}'s email address.`,
-        name: 'email',
-    },
-    {
-        type: 'input',
-        message: "Please enter the Manager's room number",
-        name: 'roomNumber',
-        when: answers => roles[0] == 'Manager'
-    },
-    {
-        type: 'input',
-        message: "Please enter the Engineers's GitHub username",
-        name: 'github',
-        when: answers => roles[0] == 'Engineer',
-    },
-    {
-        type: 'input',
-        message: "Please enter the Intern's school",
-        name: 'school',
-        when: answers => roles[0] == 'Intern'
-    },
-]
-
 const questionMenu = [
     {
         type: 'list',
@@ -64,9 +28,41 @@ function addMembers(role) {
         role = "Manager"
     }
     roles.push(role)
-    console.log('--------------')
-    console.log(roles[0])
-    inquirer.prompt(questions).then(pushMember)
+    inquirer.prompt([
+        {
+            type: 'input',
+            message: `Please enter the ${roles[0]}'s name.`,
+            name: 'name',
+        },
+        {
+            type: 'input',
+            message: `Please enter the ${roles[0]}'s employee ID.`,
+            name: 'id',
+        },
+        {
+            type: 'input',
+            message: `Please enter the ${roles[0]}'s email address.`,
+            name: 'email',
+        },
+        {
+            type: 'input',
+            message: "Please enter the Manager's room number",
+            name: 'roomNumber',
+            when: answers => roles[0] == 'Manager'
+        },
+        {
+            type: 'input',
+            message: "Please enter the Engineers's GitHub username",
+            name: 'github',
+            when: answers => roles[0] == 'Engineer',
+        },
+        {
+            type: 'input',
+            message: "Please enter the Intern's school",
+            name: 'school',
+            when: answers => roles[0] == 'Intern'
+        },
+    ]).then(pushMember)
 }
 
 function pushMember(answers) {

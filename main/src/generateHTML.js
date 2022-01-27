@@ -1,8 +1,6 @@
 const generateCard = require('./generateCard')
 
 const htmlTemplate = (teamMembers) => {
-    console.log(teamMembers)
-    // teamMembers.forEach(member => console.log(member))
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
