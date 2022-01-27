@@ -9,7 +9,7 @@ class Employee {
         if(typeof this.name !== 'string') {
             return 'Name is not a string'
         }
-        return this.name
+        return this.name.charAt(0).toUpperCase().concat(this.name.substr(1))
     }
     getId() {
         return parseInt(this.id)

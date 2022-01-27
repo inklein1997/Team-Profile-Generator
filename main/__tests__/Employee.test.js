@@ -22,5 +22,10 @@ describe('Employee', () => {
             const obj = new Employee(undefined, undefined, undefined)
             expect(obj.getRole()).toEqual(role)
         })
+        it('should capitalize the first letter of the inputted name', () => {
+            const name = 'michael'
+            const obj = new Employee(name)
+            expect(obj.getName()).toEqual('Michael')
+        })
     })
 })
