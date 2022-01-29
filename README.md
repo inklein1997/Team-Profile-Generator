@@ -19,20 +19,20 @@
 **Team Profile Generator** is a Node.js command-line application generates a webpage that displays a develop team and details of its members.  Using the [Inquirer](https://www.npmjs.com/package/inquirer) and [FS](https://nodejs.org/api/fs.html) packages, the user answers several questions that will end up with a dynamically rendered HTML webpage.  **Team Profile Generator** was created so that teams may create their own unique webpage that display that teams info so that they can have quick access to details such as gitHub profiles and emails.
 
 ## Technologies Used
-![JavaScript Logo]('./assets/images/javascript.png')
+![JavaScript Logo](./assets/images/javascript.png)
 ![NodeJS Logo](./assets/images/nodejs-logo.png)
 ![HTML5 Logo](./assets/images/html5.png)
 ![BootStrap Logo](./assets/images/bootstrap-logo.png)
 
 ## Links
-- ### [URL to Video of Application Walkthrough](https://drive.google.com/file/d/1ruBJ65X-xIckjqy9XesmZKDz5SzlC1CF/view)
+- ### [URL to Video of Application Walkthrough](https://drive.google.com/file/d/1rbL7aWemy4xJLYhPPqqt-8OZLB_SpmD9/view)
 - ### [URL to Github Repository](https://github.com/inklein1997/README-Generator)
 
 ## Screenshot of Webpage
 ![alt](./assets/images/generatedHTML-screenshot.png)
 
 ## Installation Instructions
-Since README.md Generator is a NodeJS application, you must have NodeJS downloaded. Please download [here](https://nodejs.org/en/download/) if you have not done so.
+Since **Team Profile Generator** is a NodeJS application, you must have NodeJS downloaded. Please download [here](https://nodejs.org/en/download/) if you have not done so.
 <br><br>
 The [Inquirer Package](https://www.npmjs.com/package/inquirer) is reuiqrd for this application.  Prior to running this application, please ensure that the Inquirer package is installed by running the following command in your command-line...
 ```
