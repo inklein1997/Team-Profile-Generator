@@ -5,7 +5,7 @@
 ## Table of Contents
 - [Description](#Description)
 - [Links](#Links)
-- [Technologies](#Technologies)
+- [Technologies Used](#Technologies-Used)
 - [Screenshot of Application](#Screenshot-of-Application)
 - [Installation Instructions](#Installation-Instructions)
 - [User Instructions](#User-Instructions)
@@ -47,7 +47,7 @@ node index.js
 2. Answer the prompts in the command-line
 3. Once complete, you can open the generated HTML by navigating to **./dist/index.html/**
 
-If you would like to watch a video runthrough of the application, click [Here](https://drive.google.com/file/d/111WaodGzN432_3kASeBBPG7EF6d_U1E4/view).
+If you would like to watch a video runthrough of the application, click [Here](https://drive.google.com/file/d/1rbL7aWemy4xJLYhPPqqt-8OZLB_SpmD9/view).
 
 ## Tests
 **Team Profile Generator** was created utilizing _Test Driven Development_ powered by [Jest](https://jestjs.io/).<br>
